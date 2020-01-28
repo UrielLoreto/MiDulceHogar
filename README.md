@@ -39,25 +39,25 @@ Example: http://localhost:8000/api/products/create/
 
 Request body:
 
-{
+    {
     "id": 2,
     "name": "Base enfriadora",
     "sku": "CLD23",
     "price": 260,
     "description": "Base enfriadora para laptop 17\"",
     "stock": 300
-}
+    }
   
  Good response: <br />
  
-{
+    {
     "id": 2,
     "name": "Base enfriadora",
     "sku": "CLD23",
     "price": 260,
     "description": "Base enfriadora para laptop 17\"",
     "stock": 300
-}
+    }
   
 
 ### GET /getbyid/[id]/
@@ -67,14 +67,14 @@ Example: http://localhost:8000/api/products/getbyid/[id]
   
  Good response: <br />
  
-{
+    {
     "id": 2,
     "name": "Base enfriadora",
     "sku": "CLD23",
     "price": 260,
     "description": "Base enfriadora para laptop 17\"",
     "stock": 290
-}
+    }
   
 
 ### GET /getbyname?search=[name]
@@ -123,20 +123,20 @@ Example: http://example.com/api/products/1/updateprice/
 
 Request body:
 
-	{
+    {
 	   "price" : "30"
-	}
+    }
   
  Good response: <br />
  
-{
+    {
     "id": 1,
     "name": "Nuevo",
     "sku": "nev3",
     "price": 30,
     "description": "USB 32GB",
     "stock": 20
-}
+    }
   
 
 ### POST /[id]/delete/
@@ -146,9 +146,9 @@ Example: http://localhost:8000/api/products/1/delete/
 
  Bad response: <br />
  
-{
+    {
     "detail": "Not found."
-}
+    }
 
 
 
@@ -157,18 +157,18 @@ Example: http://localhost:8000/api/products/buy/
 
 Request body:
 
-	{
-	   "product" : "2",
-	   "quantity" : "10"
-	}
+    {
+    	"product" : "2",
+    	"quantity" : "10"
+    }
 
  Good response: <br />
  
-{
-    "quantity": 10,
-    "total_price": 1500,
-    "product": 2
-}
+	{
+	    "quantity": 10,
+	    "total_price": 1500,
+	    "product": 2
+	}
 
 
 ### GET /buy/log
@@ -176,35 +176,36 @@ Example: http://localhost:8000/api/products/buy/log
 
 
  Good response: <br />
- {
-        "id": 1,
-        "quantity": 10,
-        "total_price": 1500,
-        "date": "2020-01-28T21:17:34.046888Z",
-        "product": {
-            "id": 1,
-            "name": "Nuevo",
-            "sku": "nev3",
-            "price": 30,
-            "description": "USB 32GB",
-            "stock": 20
-        }
- },
- {
-        "id": 2,
-        "quantity": 10,
-        "total_price": 2600,
-        "date": "2020-01-28T22:13:10.407615Z",
-        "product": {
-            "id": 2,
-            "name": "Base enfriadora",
-            "sku": "CLD23",
-            "price": 260,
-            "description": "Base enfriadora para laptop 17\"",
-            "stock": 290
-        }
- }
- 
+
+	{
+		"id": 1,
+		"quantity": 10,
+		"total_price": 1500,
+		"date": "2020-01-28T21:17:34.046888Z",
+		"product": {
+			"id": 1,
+			"name": "Nuevo",
+			"sku": "nev3",
+			"price": 30,
+			"description": "USB 32GB",
+			"stock": 20
+		}
+	},
+	{
+		"id": 2,
+		"quantity": 10,
+		"total_price": 2600,
+		"date": "2020-01-28T22:13:10.407615Z",
+		"product": {
+			"id": 2,
+			"name": "Base enfriadora",
+			"sku": "CLD23",
+			"price": 260,
+			"description": "Base enfriadora para laptop 17\"",
+			"stock": 290
+			}
+	}
+
 
 ## Live Demo 🚀
 You can check live demo deployed on Heroku here:
