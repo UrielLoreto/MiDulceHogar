@@ -67,15 +67,14 @@ Example: http://localhost:8000/api/products/getbyid/[id]
   
  Good response: <br />
  
-	{
-	   "Name": "iPhone X",
-	    "Price": "19900",
-	    "NPC": "123456",
-	    "last_update": "2018-09-15 17:21:12.907826+00:00",
-	    "likes": 0,
-	    "id": 1,
-	    "Stock": "10"
-	}
+{
+    "id": 2,
+    "name": "Base enfriadora",
+    "sku": "CLD23",
+    "price": 260,
+    "description": "Base enfriadora para laptop 17\"",
+    "stock": 290
+}
   
 
 ### GET /getbyname?search=[name]
